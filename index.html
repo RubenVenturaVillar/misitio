@@ -4,40 +4,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
     
     <meta charset="utf-8"/>
-    <meta name="generator" content="Wix.com Website Builder"/>
-  
-    
-    
-    <meta http-equiv="X-Wix-Meta-Site-Id" content="9b88bc44-5793-473a-9dca-bad8e9a9fda6"/>
-    <meta http-equiv="X-Wix-Application-Instance-Id" content="b84b019c-26a0-48ee-816d-5e16b114cdd7"/>
-    
-    
-        <meta http-equiv="X-Wix-Published-Version" content="9"/>
-    
-    
-    
-    
-    <meta name = "format-detection" content = "telephone=no"/>
-    
-    
+ 
+      
 
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
 
-    
-     <meta id="wixMobileViewport" name="viewport" content="width=980, user-scalable=yes"/>
-    
-
-    
-    
-    
-    
-
-    
-
-
-
-
-
+   
     <!-- META DATA -->
     <script type="text/javascript">
         
@@ -57,222 +29,13 @@
         var yandexMetrika = "";
     </script>
     
-    
-    <script>
-        var wixBiSession = {
-            initialTimestamp: Date.now()
-            , ssrRequestTimestamp: 1586611302832
-            , requestId: publicModel.requestId
-            , viewerSessionId: 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,function(c){var r=Math.random()*16|0,v=c=='x'?r:(r&0x3|0x8);return v.toString(16);})
-            , sessionId: '9788db76-02a9-4920-bfc9-6f4b30b2d40c'
-            , initialRequestTimestamp: performance.timeOrigin ? performance.timeOrigin : Date.now() - performance.now()
-            , visitorId: publicModel.sessionInfo.visitorId
-            
-            , is_rollout: 0
-            , is_platform_loaded: 1
-            , suppressbi: false
-            , dc: '42'
-            , renderType: 'bolt'
-            , siteRevision: '9'
-            , siteCacheRevision: '1586611302794'
-            , wixBoltExclusionReason: ''
-            , wixBoltExclusionReasonMoreInfo: ''
-            , checkVisibility: (function () {
-                var alwaysVisible = document.hidden !== true;
-                function checkVisibility() {
-                    alwaysVisible = alwaysVisible && document.hidden !== true;
-                    return alwaysVisible;
-                }
-                document.addEventListener('visibilitychange', checkVisibility, false);
-                return checkVisibility;
-            })()
-            , cacheCookie: document.cookie.match(/ssr-caching="?cache[,#]\s*desc=(\w+)(?:[,#]\s*varnish=(\w+))?(?:[,#]\s*dc[,#]\s*desc=(\w+))?(?:"|;|$)/)
-            , setCaching: function (bodyCacheable) {
-                var timing = performance.timing;
-                if (timing && timing.responseStart && timing.responseStart - timing.requestStart < 10) {
-                    wixBiSession.caching = 'browser';
-                    wixBiSession.isCached = true;
-                    return;
-                }
-
-                if (!bodyCacheable) {
-                    wixBiSession.caching = undefined;
-                }
-
-                var parts = wixBiSession.cacheCookie;
-                if (parts) {
-                    set(parts);
-                }
-
-                if (window.PerformanceServerTiming) {
-                    var serverTiming = performance.getEntriesByType('navigation')[0].serverTiming;
-                    if (serverTiming && serverTiming.length) {
-                        var names = [, 'cache', 'varnish', 'dc'];
-                        parts = [];
-                        serverTiming.forEach(function (entry) {
-                            var i = names.indexOf(entry.name);
-                            if (i > 0) {
-                                parts[i] = entry.description;
-                            }
-                        });
-                        set(parts);
-                    }
-                }
-
-                if (!wixBiSession.caching) {
-                    if (bodyCacheable && timing && timing.responseEnd && timing.responseEnd - timing.responseStart < 10) {
-                        wixBiSession.caching = 'suspected_etag';
-                        wixBiSession.isCached = true;
-                    } else {
-                        wixBiSession.caching = 'none';
-                        wixBiSession.isCached = false;
-                    }
-                }
-
-                function set(parts) {
-                    if (bodyCacheable && parts[1]) {
-                        wixBiSession.caching = parts[1] + ',' + (parts[2] || 'none');
-                        wixBiSession.isCached = isCached(parts[1]) || isCached(parts[2]);
-                    }
-                    if (parts[3]) {
-                        wixBiSession.microPop = parts[3];
-                    }
-                }
-                function isCached(part) {
-                    return part && part.indexOf('hit') === 0;
-                }
-            }
-            , sendBeacon: function (url) {
-                if (!wixBiSession.suppressbi) {
-                
-                    var sent = false;
-                    try {
-                        sent = navigator.sendBeacon(url);
-                    } catch (e) {}
-                    if (!sent) {
-                        (new Image()).src = url;
-                    }
-                
-                }
-            }
-            , sendBeat: (function () {
-                var beatUrl = 'https://frog.wix.com/bt?src=29&evid=3'
-                    + '&v=1.5611.0'
-                    + '&msid=9b88bc44-5793-473a-9dca-bad8e9a9fda6'
-                    + '&isp=0'
-                    + '&st=2'
-                    + '&dc=42'
-                    + '&iss=1'
-                    + '&url=' + encodeURIComponent(location.href.replace(/^http(s)?:\/\/(www\.)?/, ''));
-                var referrer = document.referrer;
-                if (referrer) {
-                    beatUrl += '&ref=' + encodeURIComponent(referrer);
-                }
-                var match = document.cookie.match(/_wixCIDX=([^;]*)/)
-                if (match) {
-                    beatUrl += '&client_id=' + match[1];
-                }
-                var prevMark = 'fetchStart';
-                return function(et, name, extra, pageNumber) {
-                    var tts = Math.round(performance.now());
-                    var ts = et === 1 ? 0 : Date.now() - wixBiSession.initialTimestamp;
-                    if (name && performance.mark) {
-                        var mark = name + ' (beat ' + et + ')';
-                        performance.mark(mark);
-                        if (performance.measure) {
-                            performance.measure('\u2B50' + mark, prevMark, mark);
-                        }
-                        prevMark = mark;
-                    }
-                    extra = extra || '';
-                    if (extra.indexOf('pn=') === -1) {
-                        extra += '&pn=' + (pageNumber || '1');
-                    }
-                    if (extra.indexOf('sr=') === -1 && screen.width) {
-                        extra += '&sr=' + screen.width + 'x' + screen.height;
-                    }
-                    if (screen.availWidth) {
-                        extra += '&sar=' + screen.availWidth + 'x' + screen.availHeight;
-                    }
-                    if (extra.indexOf('wr=') === -1 && window.innerWidth) {
-                        extra += '&wr=' + window.innerWidth + 'x' + window.innerHeight;
-                    }
-                    if (window.outerWidth) {
-                        extra += '&wor=' + window.outerWidth + 'x' + window.outerHeight;
-                    }
-                    if (extra.indexOf('ita=') === -1) {
-                        extra += '&ita=' + (wixBiSession.checkVisibility() ? '1' : '0');
-                    }
-                    if (wixBiSession.siteRevision || wixBiSession.siteCacheRevision) {
-                        extra += '&siterev=' + wixBiSession.siteRevision + "-" + wixBiSession.siteCacheRevision;
-                    }
-                    if (wixBiSession.hasOwnProperty('isUsingMesh')) {
-                        extra += '&ism=' + (wixBiSession.isUsingMesh ? '1' : '0');
-                    }
-                    if (wixBiSession.hasOwnProperty('caching')) {
-                        extra += '&caching=' + wixBiSession.caching + '&is_cached=' + wixBiSession.isCached;
-                    }
-                    wixBiSession.sendBeacon(beatUrl
-                        + '&et=' + et
-                        + (name ? '&event_name=' + encodeURIComponent(name) : '')
-                        + '&ts=' + ts
-                        + '&tts=' + tts
-                        + '&vsi=' + wixBiSession.viewerSessionId
-                        + '&rid=' + wixBiSession.requestId
-                        + '&viewer_name=' + encodeURIComponent(wixBiSession.renderType)
-                        + '&is_rollout=' + wixBiSession.is_rollout
-                        + '&is_platform_loaded=' + wixBiSession.is_platform_loaded
-                        + (wixBiSession.sessionId ? '&sessionId=' + wixBiSession.sessionId  : '')
-                        + (wixBiSession.visitorId ? '&vid=' + wixBiSession.visitorId  : '')
-                        + (wixBiSession.siteMemberId ? '&mid=' + wixBiSession.siteMemberId  : '')
-                        + extra
-                    );
-                };
-            })()
-        };
-        wixBiSession.setCaching(true);
-        wixBiSession.sendBeat(1, 'Init');
-    </script>
-    
-    <script type="text/javascript">
-        (function(x,e,o,s,n){var a=window.fedops||{};a.apps=a.apps||{};a.apps[x]={startLoadTime:e&&e.now&&e.now()};try{a.sessionId=o.getItem("fedops.logger.sessionId")}catch(x){}a.sessionId=a.sessionId||wixBiSession.viewerSessionId;window.fedops=a;var d="//frog.wix.com/bolt-performance?appName="+x+"&src=72&evid=21"+'&dc=42'+"&is_rollout="+wixBiSession.is_rollout+ "&is_cached="+wixBiSession.isCached+"&session_id="+a.sessionId+"&_="+s();wixBiSession.sendBeacon(d)})('bolt-viewer',window.performance,window.localStorage,Math.random,window.navigator);
-    </script>
-    
-    
-    
+       
     
     
     
     
     <!-- DATA -->
-    <script type="text/javascript">
-        
-            var adData = {};
-            var mobileAdData = {};
-        
-        var usersDomain = "https://users.wix.com/wix-users";
-        
-    </script>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <script type="text/javascript">
-      var santaBase = 'https://static.parastorage.com/services/santa/1.9580.0';
-      var boltBase = 'https://static.parastorage.com/services/wix-bolt/1.5611.0';
-      var boltVersion = '1.5611.0';
-    </script>
-    
-
-    
-    
+  
     
     <script>
       var requirejs = {
