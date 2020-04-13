@@ -1,7 +1,12 @@
 body {
   font-family: 'Titillium Web', sans-serif;
+  background: url(../img/fondohojas.jpg);
 }
-
+.foto{
+	border-radius: 50%;
+	height:500px;
+	padding: 30px 0 30px 0;
+}
 .navbar-brand {
   font-size: 20px;
   color: #000;
@@ -9,17 +14,72 @@ body {
 }
 
 #testimonial {
-  background: #f1f1f1;
-  padding: 50px 0 30px 0;
-  text-align:center;
-  margin-top: 40px;
+	padding: 50px 0 30px 0;
+  	text-align:center;
+  	margin-top: 40px;
 }
 
 .my-flex-container{
-	border: 5px solid green;
-	
+	background: #f1f1f1;
+	padding: 30px 0 30px 0;
+	margin: 10px;
+  	text-align:center;
+	border: 5px;
+	border-style: solid;
+	border-radius: 10px 10px 10px 10px;
+	border-color: #5FD4B1;
+}
+.fondo{
+	background: #f1f1f1;
+	padding: 30px 0 30px 0;
+
 }
 
-footer {
-  background: url(../img/fondohojas.jpg);
+.contact {
+    display: flex;
+    border-top: 1px solid black;
+    background-color: white;
+    color: black;
+    height: 150px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact {
+    display: flex;
+    border-top: 1px solid black;
+    background-color: white;
+    color: black;
+    height: 150px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.highlight {
+    background-color: #5FD4B1;
+    color: black;
+    font-family: "Oswald", sans-serif;
+    font-size: 40px;
+}
+.social-link {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-size: 40px 40px;
+  margin: 0 10px;
+
+}
+.social-link.linkedin {
+    background-image: url("../img/link.png");
+}
+.social-link.instagram {
+    background-image: url("../img/inst.png");
+}
+.social-link.github {
+    background-image: url("../img/git.png");
+}
+.social-link.email {
+    background-image: url("../img/email.png");
+    background-repeat: no-repeat;
+    padding-right: 90px;
 }
