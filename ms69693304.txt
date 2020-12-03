@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Archivo de comprobación de propiedad del dominio para Microsoft 365: colocar en la raíz del sitio web",
+  "Domain": "rubenventuravillar.github.io",
+  "Id": "311482c9-1bec-45ec-868f-0f329d1bb1f5"
+}
